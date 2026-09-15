@@ -4,7 +4,6 @@
 
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := SysuiDarkThemeOverlay
 LOCAL_MODULE_OWNER := samsung
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -12,7 +11,5 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
-LOCAL_SRC_FILES := proprietary/overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk
 include $(BUILD_PREBUILT)
 
-PRODUCT_PACKAGES += SysuiDarkThemeOverlay
