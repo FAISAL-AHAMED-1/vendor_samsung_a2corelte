@@ -1,6 +1,5 @@
 # Auto-generated PRODUCT_COPY_FILES for a2corelte proprietary vendor blobs
 # Source: real stock vendor image (samsung/a2coreltedd/a2corelte:8.1.0/OPR6/A260GDDSCAUJ1:user/release-keys)
-# NOTE: .apk/.jar files are intentionally excluded here -- see Android.mk,
 # they need proper prebuilt module stanzas (signing/permissions), not raw copy.
 
 PRODUCT_COPY_FILES += \
@@ -355,10 +354,22 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a2corelte/proprietary/manifest.xml:$(TARGET_COPY_OUT_VENDOR)/manifest.xml \
     vendor/samsung/a2corelte/proprietary/media/LMspeed_508.emd:$(TARGET_COPY_OUT_VENDOR)/media/LMspeed_508.emd \
     vendor/samsung/a2corelte/proprietary/media/PFFprec_600.emd:$(TARGET_COPY_OUT_VENDOR)/media/PFFprec_600.emd \
-    vendor/samsung/a2corelte/proprietary/overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk \
-    vendor/samsung/a2corelte/proprietary/overlay/framework-res__auto_generated_rro.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/framework-res__auto_generated_rro.apk \
     vendor/samsung/a2corelte/proprietary/tee/00000000-0000-0000-0000-474154454b45:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-474154454b45 \
     vendor/samsung/a2corelte/proprietary/tee/00000000-0000-0000-0000-4b45594d5354:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-4b45594d5354 \
     vendor/samsung/a2corelte/proprietary/tee/00000000-0000-0000-0000-505256544545:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-505256544545 \
     vendor/samsung/a2corelte/proprietary/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_:$(TARGET_COPY_OUT_VENDOR)/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_ \
     vendor/samsung/a2corelte/proprietary/tee/startup.tzar:$(TARGET_COPY_OUT_VENDOR)/tee/startup.tzar
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := SysuiDarkThemeOverlay
+LOCAL_MODULE_OWNER := samsung
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay
+LOCAL_SRC_FILES := proprietary/overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk
+include $(BUILD_PREBUILT)
+
+PRODUCT_PACKAGES += SysuiDarkThemeOverlay
